@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Crew Zambia - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Stylish Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .menu-icon {
+            display: block;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+
+        .navbar .menu-icon span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: #333;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .navbar .menu.show {
+            display: flex;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        /* Styling for Home Section */
+        .home {
+            text-align: center;
+            padding: 10% 0;
+            background-image: url('home-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .home-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px; /* Added padding for better readability on smaller screens */
+        }
+
+        .home h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f39c12;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .home h3 {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .home p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 0 auto 40px;
+            font-weight: normal;
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* Change the font color back to white */
+        }
+
+        /* Styling for Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+    </style>
+    <script>
+        // JavaScript to toggle the dropdown menu on mobile screens
+        function toggleMenu() {
+            var menu = document.querySelector('.navbar .menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="clean-crew-zambia-logo.jpg" alt="Clean Crew Zambia Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                Menu
+            </div>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="social.html">Social & Environmental Impact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Welcome to Clean Crew Zambia</h1>
+            <h3>Professional Cleaning Services</h3>
+            <p>We are your reliable partner for all your cleaning needs. From residential to commercial spaces, we deliver top-notch cleaning services to make your environment spotless and fresh.</p>
+            <div class="contact-btn-box">
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add a link to navigate to the Services page -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="services.html">Explore Our Services</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Clean Crew Zambia. All rights reserved.</p>
+        <a href="about-us.html">About Us</a>
+    </footer>
+</body>
+</html>

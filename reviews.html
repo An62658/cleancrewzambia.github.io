@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Crew Zambia - Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333333; /* Dark grey background color */
+            color: #fff; /* White text color */
+        }
+
+        /* Stylish Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .menu-icon {
+            display: block;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+
+        .navbar .menu-icon span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: #333;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .navbar .menu.show {
+            display: flex;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        /* Styling for Reviews Section */
+        .reviews-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .reviews-content h2 {
+            color: #f39c12;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .reviews-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .review-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .review-card h3 {
+            font-size: 24px;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Styling for Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .reviews-content {
+                padding: 20px;
+            }
+
+            .reviews-content h2 {
+                font-size: 28px;
+            }
+
+            .reviews-content p {
+                font-size: 16px;
+            }
+
+            .review-card {
+                margin-bottom: 20px;
+            }
+
+            .review-card h3 {
+                font-size: 20px;
+            }
+
+            .review-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        // JavaScript to toggle the dropdown menu on mobile screens
+        function toggleMenu() {
+            var menu = document.querySelector('.navbar .menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="clean-crew-zambia-logo.jpg" alt="Clean Crew Zambia Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                Menu
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="social.html">Social & Environmental Impact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="reviews">
+        <div class="reviews-content">
+            <h2>Customer Reviews</h2>
+            <p>Read what our satisfied customers have to say about our professional cleaning services:</p>
+            <div class="review-card">
+                <h3>Mrs. Mitchell</h3>
+                <p>"I hired Clean Crew Zambia for a deep cleaning service, and they did an outstanding job. My house has never looked cleaner and fresher. Highly recommended!"</p>
+            </div>
+            <div class="review-card">
+                <h3>Jane Mwale</h3>
+                <p>"The team at Clean Crew Zambia provided excellent commercial cleaning for our office. They were thorough and efficient. We are very pleased with their service."</p>
+            </div>
+            <div class="review-card">
+                <h3>John Phiri</h3>
+                <p>"I am impressed with Clean Crew Zambia's attention to detail. Their staff was friendly, and they made my home look spotless. Will definitely use their services again."</p>
+            </div>
+            <div class="review-card">
+                <h3>Linda Banda</h3>
+                <p>"Clean Crew Zambia exceeded my expectations with their quick and efficient service. They transformed my carpets, and they look like new. I highly recommend them."</p>
+            </div>
+            <div class="review-card">
+                <h3>David Tembo</h3>
+                <p>"I recently used Clean Crew Zambia for a post-construction cleaning, and they did a fantastic job. My house was a mess, and they left it sparkling clean. Great work!"</p>
+            </div>
+            <div class="review-card">
+                <h3>Grace Chanda</h3>
+                <p>"I've been using Clean Crew Zambia for regular home cleaning, and I'm extremely satisfied with their service. Their team is reliable, and my home always looks immaculate after their visit."</p>
+            </div>
+            <div class="review-card">
+                <h3>Moses Kabwe</h3>
+                <p>"Clean Crew Zambia's window cleaning service is exceptional. They made my windows shine, and the view is amazing. I will definitely hire them again."</p>
+            </div>
+            <div class="review-card">
+                <h3>Beatrice Mwansa</h3>
+                <p>"I am impressed with Clean Crew Zambia's eco-friendly cleaning products. They are effective and safe for my family and pets. Great job!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add a link to navigate back to the home page -->
+    <div class="back-link">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Clean Crew Zambia. All rights reserved.</p>
+    </footer>
+</body>
+</html>

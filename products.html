@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Crew Zambia - Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333333;
+            color: #fff;
+        }
+
+        /* Stylish Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .menu-icon {
+            display: block;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+
+        .navbar .menu-icon span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: #333;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .navbar .menu.show {
+            display: flex;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        /* Styling for Products Section */
+        .products-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .products-content h2 {
+            color: #f39c12;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .products-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-btn-box {
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #e28909;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            color: #f39c12;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            color: #e28909;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            /* Update styles for smaller screens */
+        }
+
+    </style>
+    <script>
+        // JavaScript to toggle the dropdown menu on mobile screens
+        function toggleMenu() {
+            var menu = document.querySelector('.navbar .menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="clean-crew-zambia-logo.jpg" alt="Clean Crew Zambia Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                Menu
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="social.html">Social & Environmental Impact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products">
+        <div class="products-content">
+            <h2>Cleaning Products for Sale</h2>
+            <p>We offer a range of high-quality cleaning products that you can purchase to maintain the cleanliness of your home or business. Our products are safe, effective, and environmentally friendly.</p>
+            <div class="product-cards">
+                <a href="contact.html" class="product-card">
+                    <img src="floor-cleaning.jpg" alt="Floor Cleaning Products">
+                    <h3>Floor Cleaning Products</h3>
+                    <p>Available Now</p>
+                </a>
+                <a href="contact.html" class="product-card">
+                    <img src="toilet-cleaning.jpg" alt="Toilet Cleaning Products">
+                    <h3>Toilet Cleaning Products</h3>
+                    <p>Available Now</p>
+                </a>
+                <a href="contact.html" class="product-card">
+                    <img src="disinfectants.jpg" alt="Disinfectants">
+                    <h3>Disinfectants</h3>
+                    <p>Available Now</p>
+                </a>
+                <a href="contact.html" class="product-card">
+                    <img src="hand-wash-liquid-soaps.jpg" alt="Hand Wash & Liquid Soaps">
+                    <h3>Hand Wash & Liquid Soaps</h3>
+                    <p>Available Now</p>
+                </a>
+                <a href="contact.html" class="product-card">
+                    <img src="window-cleaning-products.jpg" alt="Window Cleaning Products">
+                    <h3>Window Cleaning Products</h3>
+                    <p>Available Now</p>
+                </a>
+                <a href="contact.html" class="product-card">
+                    <img src="grout-tile-cleaner.jpg" alt="Grout & Tile Cleaner">
+                    <h3>Grout & Tile Cleaner</h3>
+                    <p>Available Now</p>
+                </a>
+                <a href="contact.html" class="product-card">
+                    <img src="all-purpose-cleaner.jpg" alt="All Purpose Cleaner">
+                    <h3>All Purpose Cleaner</h3>
+                    <p>Available Now</p>
+                </a>
+                <a href="contact.html" class="product-card">
+                    <img src="toiletries.jpg" alt="Toiletries">
+                    <h3>Toiletries</h3>
+                    <p>Available Now</p>
+                </a>
+            </div>
+            <p>For inquiries and to place an order, please contact us using the provided contact details.</p>
+            <div class="contact-btn-box">
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add a link to navigate back to the home page -->
+    <div class="back-link">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Clean Crew Zambia. All rights reserved.</p>
+    </footer>
+</body>
+</html>

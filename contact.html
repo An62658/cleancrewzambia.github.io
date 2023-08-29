@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Crew Zambia - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            color: #fff;
+        }
+
+        /* Stylish Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .menu-icon {
+            display: block;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+
+        .navbar .menu-icon span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: #333;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .navbar .menu.show {
+            display: flex;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        /* Rest of your existing styles */
+
+        /* Styling for Contact Section */
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-image: url('contact_image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .contact-content {
+            flex-basis: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-content h2 {
+            color: #f39c12;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .contact-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .contact-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .contact-form label,
+        .contact-form textarea {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media only screen and (max-width: 767px) {
+            /* Your media query styles */
+        }
+    </style>
+    <script>
+        // JavaScript to toggle the dropdown menu on mobile screens
+        function toggleMenu() {
+            var menu = document.querySelector('.navbar .menu');
+            menu.classList.toggle('show');
+        }
+
+        // JavaScript to handle form submission and send data to PHP script asynchronously
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch("submit_form.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    throw new Error("Network response was not ok.");
+                }
+            })
+            .then(function(data) {
+                console.log(data); // Optional: Display the response from the PHP script
+                alert("Message sent successfully!"); // Optional: Show an alert to the user
+                form.reset(); // Optional: Clear the form fields after successful submission
+            })
+            .catch(function(error) {
+                console.error("Error occurred while submitting the form:", error);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="clean-crew-zambia-logo.jpg" alt="Clean Crew Zambia Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                Menu
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="social.html">Social & Environmental Impact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>For inquiries or to request our professional cleaning services, please feel free to get in touch with us through the following contact methods:</p>
+            <ul>
+                <li>Phone: <a href="tel:+260976836349 | +260962586998">+260976836349 | +260962586998</a></li>
+                <li>Email: <a href="mailto:cleancrewzambia@gmail.com">cleancrewzambia@gmail.com</a></li>
+                <li>Address: Lusaka, Zambia, 215D, Mbereshi Way  Nyumba Yanga Napsa Complex</li>
+            </ul>
+
+            <div class="contact-form">
+                <h3>Send us a message</h3>
+                <form id="contactForm" method="POST">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

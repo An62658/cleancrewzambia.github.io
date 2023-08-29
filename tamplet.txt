@@ -1,0 +1,5 @@
+add Meta Viewport Tag Responsive Design Classes Image Sizes: Ensure that images are appropriately sized for smaller screens to reduce loading times and optimize the user experience. Responsive Navigation: Make sure your navigation menu is easy to use on smaller screens. Consider using a mobile-friendly navigation pattern, such as a hamburger menu, or collapsing the menu into a dropdown.
+
+Mobile-Friendly Elements: Check that interactive elements (buttons, links, form inputs) have sufficient padding and touch-friendly sizes for users on touch-based devices.
+
+Media Queries: If you have any custom styles specific to different screen sizes, ensure that they are applied using Media Queries in the CSS file. For example, if you want to change the font size or layout on smaller screens, you can use Media Queries to do so.  keep the code in tact just implement the steps mentioned above dont change anything else make the code adaptive to smaller screens like phone screens here is the code

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Crew Zambia - Social and Environmental Impacts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS specific to the Social and Environmental Impacts page */
+        .impacts-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .impacts-content h2 {
+            color: #007bff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .impacts-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .impacts-content h3 {
+            color: #007bff;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .impacts-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        /* Responsive Design Classes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Responsive Navigation */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .menu-icon {
+            display: block;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+
+        .navbar .menu-icon span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: #333;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .navbar .menu.show {
+            display: flex;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media only screen and (max-width: 767px) {
+            .impacts-content {
+                padding: 20px;
+            }
+
+            .impacts-content h2 {
+                font-size: 28px;
+            }
+
+            .impacts-content p {
+                font-size: 16px;
+            }
+
+            .impacts-content h3 {
+                font-size: 20px;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        // JavaScript to toggle the dropdown menu on mobile screens
+        function toggleMenu() {
+            var menu = document.querySelector('.navbar .menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="clean-crew-zambia-logo.jpg" alt="Clean Crew Zambia Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                Menu
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="social.html" class="active">Social & Environmental Impacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="impacts">
+        <div class="impacts-content">
+            <h2>Social and Environmental Impacts</h2>
+            <p>Clean Crew Zambia is committed to making positive contributions to both society and the environment. Our cleaning practices have various social and environmental impacts:</p>
+            
+            <h3>Social Impacts:</h3>
+            <ul>
+                <li>Creating Employment Opportunities: We provide jobs and employment opportunities for local communities, contributing to economic growth.</li>
+                <li>Supporting Clean and Healthy Spaces: Our cleaning services create a clean and hygienic environment for homes, businesses, and public places.</li>
+                <li>Improving Quality of Life: Clean environments lead to improved health and well-being for individuals and communities.</li>
+                <li>Engaging in Community Outreach: We participate in community clean-up and educational initiatives to raise awareness about cleanliness and hygiene.</li>
+            </ul>
+            
+            <h3>Environmental Impacts:</h3>
+            <ul>
+                <li>Reducing Pollution: Our eco-friendly cleaning practices help reduce indoor and outdoor pollution by using safe and non-toxic cleaning agents.</li>
+                <li>Conserving Resources: We promote efficient resource use by using eco-friendly products and minimizing water and energy consumption.</li>
+                <li>Waste Reduction: We strive to minimize waste generation and implement proper waste disposal and recycling practices.</li>
+                <li>Preserving Biodiversity: Our responsible cleaning practices contribute to the protection of local ecosystems and wildlife.</li>
+            </ul>
+            
+            <p>We are dedicated to continuously improving our social and environmental impacts to create a cleaner, healthier, and more sustainable future.</p>
+        </div>
+    </section>
+
+    <!-- Add a link to navigate back to the home page -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Clean Crew Zambia. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Crew Zambia - Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333333; /* Dark blue background color */
+            color: #fff; /* White text color */
+        }
+
+        /* Stylish Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .menu-icon {
+            display: block;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+
+        .navbar .menu-icon span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: #333;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .navbar .menu.show {
+            display: flex;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        /* Service Cards Styling */
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            text-decoration: none;
+            display: block;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Partially transparent background */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #fff;
+            opacity: 0.9; /* Slightly increased opacity */
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .services-container {
+                padding: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .services-container {
+                padding: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
+    <script>
+        // JavaScript to toggle the dropdown menu on mobile screens
+        function toggleMenu() {
+            var menu = document.querySelector('.navbar .menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="clean-crew-zambia-logo.jpg" alt="Clean Crew Zambia Logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                Menu
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="social.html">Social & Environmental Impact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="services-container">
+        <!-- Service 1 -->
+        <a href="contact.html" class="service-card">
+            <h3>Residential Cleaning</h3>
+            <img src="residential-cleaning.jpg" alt="Residential Cleaning">
+            <p>Our residential cleaning services ensure that your home is spotless and hygienic. We clean and sanitize every room, including bedrooms, living areas, bathrooms, and kitchens. Trust us to leave your home sparkling clean and fresh.</p>
+        </a>
+
+        <!-- Service 2 -->
+        <a href="contact.html" class="service-card">
+            <h3>Commercial Cleaning</h3>
+            <img src="commercial-cleaning.jpg" alt="Commercial Cleaning">
+            <p>We offer top-notch commercial cleaning solutions for businesses of all sizes. From offices and retail spaces to warehouses and restaurants, we ensure a clean and tidy environment that creates a positive impression on your customers and employees.</p>
+        </a>
+
+        <!-- Service 3 -->
+        <a href="contact.html" class="service-card">
+            <h3>Deep Cleaning</h3>
+            <img src="deep-cleaning.jpg" alt="Deep Cleaning">
+            <p>Our deep cleaning service is designed to tackle those hard-to-reach areas and hidden dirt in your property. We go above and beyond regular cleaning to provide a thorough and comprehensive cleaning experience.</p>
+        </a>
+        <!-- Service 4 -->
+        <a href="contact.html" class="service-card">
+            <h3>Carpet and Upholstery Cleaning</h3>
+            <img src="carpet-upholstery-cleaning.jpg" alt="Carpet and Upholstery Cleaning">
+            <p>Let us revive and refresh your carpets and upholstery. Our specialized cleaning techniques remove stains, dirt, and allergens, leaving your carpets and furniture looking and feeling like new.</p>
+        </a>
+
+        <!-- Service 5 -->
+        <a href="contact.html" class="service-card">
+            <h3>Window Cleaning</h3>
+            <img src="window-cleaning.jpg" alt="Window Cleaning">
+            <p>We offer professional window cleaning services to keep your windows streak-free and crystal clear. Our team uses safe and effective methods to enhance the view from your home or business.</p>
+        </a>
+
+        <!-- Service 6 -->
+        <a href="contact.html" class="service-card">
+            <h3>Move-in/Move-out Cleaning</h3>
+            <img src="move-in-out-cleaning.jpg" alt="Move-in/Move-out Cleaning">
+            <p>If you are moving into or out of a property, our move-in/move-out cleaning service will ensure a clean and welcoming space for the next occupants or prepare your new home for a fresh start.</p>
+        </a>
+
+        <!-- Service 7 -->
+        <a href="contact.html" class="service-card">
+            <h3>Disinfection & Pest Control</h3>
+            <img src="disinfection-pest-control.jpg" alt="Disinfection & Pest Control">
+            <p>Our disinfection and pest control services ensure a safe and hygienic environment by eliminating harmful pathogens and pests. We use effective methods to protect your home or business.</p>
+        </a>
+
+        <!-- Service 8 -->
+        <a href="contact.html" class="service-card">
+            <h3>Maid Services</h3>
+            <img src="maid-services.jpg" alt="Maid Services">
+            <p>Our maid services provide professional and reliable help for your daily household tasks. We offer assistance with cleaning, laundry, cooking, and other housekeeping chores.</p>
+        </a>
+
+        <!-- Service 9 -->
+        <a href="contact.html" class="service-card">
+            <h3>Landscaping/Gardener Services</h3>
+            <img src="landscaping-gardener.jpg" alt="Landscaping/Gardener Services">
+            <p>Our landscaping and gardener services transform your outdoor spaces into beautiful and well-maintained areas. We offer lawn care, gardening, and landscaping design services.</p>
+        </a>
+
+        <!-- Service 10 -->
+        <a href="contact.html" class="service-card">
+            <h3>Laundry Services</h3>
+            <img src="laundry-services.jpg" alt="Laundry Services">
+            <p>Our laundry services handle your laundry needs with care and efficiency. We offer washing, drying, ironing, and folding to keep your clothes fresh and neat.</p>
+        </a>
+
+        <!-- Service 11 -->
+        <a href="contact.html" class="service-card">
+            <h3>Mobile Car Wash (Full Valet)</h3>
+            <img src="mobile-car-wash.jpg" alt="Mobile Car Wash (Full Valet)">
+            <p>Our mobile car wash provides convenient car cleaning services at your location. We offer a full valet service, including washing, waxing, and interior cleaning.</p>
+        </a>
+
+        <!-- Service 12 -->
+        <a href="contact.html" class="service-card">
+            <h3>Vacuuming & Detailing</h3>
+            <img src="vacuuming-detailing.jpg" alt="Vacuuming & Detailing">
+            <p>Our vacuuming and detailing services maintain the cleanliness of your vehicle's interior. We remove dirt, dust, and debris, leaving your car's interior looking fresh and well-maintained.</p>
+        </a>
+
+        <!-- Service 13 -->
+        <a href="contact.html" class="service-card">
+            <h3>Swimming Pool Cleaning</h3>
+            <img src="swimming-pool-cleaning.jpg" alt="Swimming Pool Cleaning">
+            <p>Our swimming pool cleaning services maintain the hygiene and clarity of your pool. We clean and treat the pool water, ensuring a safe and enjoyable swimming experience.</p>
+        </a>
+
+        <!-- Service 14 -->
+        <a href="contact.html" class="service-card">
+            <h3>Shoe Cleaning</h3>
+            <img src="shoe-cleaning.jpg" alt="Shoe Cleaning">
+            <p>Our shoe cleaning services restore the cleanliness and appearance of your shoes. We remove stains and dirt, leaving your shoes looking fresh and ready to wear.</p>
+        </a>
+    </div>
+    
+    <script>
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdown-menu");
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
